@@ -59,14 +59,14 @@
     <Compile Include="BusinessObject\Transaction.cs" />
     <Compile Include="BusinessObject\TransactionCollection.cs" />
     <Compile Include="Common\Constants.cs" />
-    <Compile Include="DataAccess\Process.cs" />
+    <Compile Include="DataAccess\TrasactionDataAccess.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\IProcess.cs" />
+    <Compile Include="Interface\ITransactionDataAccess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -91,9 +91,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Content Include="TransactionData1.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="ReadME.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

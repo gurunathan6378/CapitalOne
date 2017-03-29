@@ -12,9 +12,9 @@ namespace CapitalOne_Interview.DataAccess
     /// <summary>
     /// Process class 
     /// </summary>
-    public class Process : IProcess
+    public class TrasactionDataAccess : ITransactionDataAccess
     {
-        public virtual string CalculateTransactions(TransactionCollection transactions)
+        public virtual string CalculateTransactions(bool ignoreDonutTransactions, TransactionCollection transactions)
         {
             string returnValue = string.Empty;
             if (transactions != null && transactions.Transactions != null && transactions.Transactions.Count > 0)
@@ -51,7 +51,7 @@ namespace CapitalOne_Interview.DataAccess
 
                                                 )
                                             where
-                                                 !merchantFilter.Contains(oTran.Merchant)   // Filters donuts purchases, Credit Card and CC Payment 
+                                                 (!ignoreDonutTransactions) || (ignoreDonutTransactions && !merchantFilter.Contains(oTran.Merchant))   // Filters donuts purchases, Credit Card and CC Payment 
                                                                                             //&& oTran.TransactionTime.ToString(Constants.MonthYearFormat) == "2014-11"
                                             group oTran by oTran.TransactionTime.ToString(Constants.MonthYearFormat) into trans
                                             select
@@ -68,7 +68,7 @@ namespace CapitalOne_Interview.DataAccess
                     // hence changing teh CurrencyNegativePattern = 1 in order to show the currency value in -ve value as per the requirement
 
 
-                    string print = "Actual result emitting Month Year, Spending and Income";
+                    string print = string.Format("Actual result emitting Month Year, Spending and Income - {0}", ignoreDonutTransactions ? "Ignored Donut Transaction" : "All Transactions" ) ;
                     messageBuilder.AppendLine(print);
                     messageBuilder.AppendLine(new string('-', print.Length * 2) + "\n");
 

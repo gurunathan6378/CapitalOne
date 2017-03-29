@@ -16,6 +16,7 @@ namespace CapitalOne_Interview
         public Form1()
         {
             InitializeComponent();
+            this.Text = "Expenditures";
 
         }
 
@@ -40,11 +41,15 @@ namespace CapitalOne_Interview
                 transactions = (TransactionCollection)JsonConvert.DeserializeObject(stream.ReadToEnd(), typeof(TransactionCollection));
             }
 
-            Process process = new Process();
+            TrasactionDataAccess process = new TrasactionDataAccess();
+            richTextBox1.Text = string.Empty;
             if (transactions != null && transactions.Transactions != null && transactions.Transactions.Count > 0)
-            {
-                richTextBox1.Text = process.CalculateTransactions(transactions);
-                richTextBox1.Text += process.GetCreditCardTransactions(transactions);
+            {                
+                richTextBox1.Text = process.CalculateTransactions(ckbIgnoreDonuts.Checked, transactions);
+                if (ckbShowCCPayments.Checked)
+                {
+                    richTextBox1.Text += process.GetCreditCardTransactions(transactions);
+                }
             }                 
             else
             {
