@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapitalOne_Interview", "CapitalOne_Interview\CapitalOne_Interview.csproj", "{3AB0D48F-E089-4454-A584-28F1309736AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapitalOne_Interview.Tests", "CapitalOne_Interview.Tests\CapitalOne_Interview.Tests.csproj", "{9D9878D6-2071-4B3B-9938-C602B42850A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AB0D48F-E089-4454-A584-28F1309736AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AB0D48F-E089-4454-A584-28F1309736AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AB0D48F-E089-4454-A584-28F1309736AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AB0D48F-E089-4454-A584-28F1309736AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D9878D6-2071-4B3B-9938-C602B42850A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D9878D6-2071-4B3B-9938-C602B42850A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D9878D6-2071-4B3B-9938-C602B42850A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D9878D6-2071-4B3B-9938-C602B42850A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
