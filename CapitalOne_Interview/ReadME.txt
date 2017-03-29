@@ -17,8 +17,8 @@ We’d also like you to try and add at least one “additional feature” to thi
  
 
  
- Note from the coder: 
- =====================
+ Note from me: 
+ ==============
  1.) For some reason I could not able to call the API https://doc.level-labs.com and getting the below error
  "Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host", so 
  I decide to get the data manually from https://2016.api.levelmoney.com/ by navigating to GetAllTransactions URI and store them 
